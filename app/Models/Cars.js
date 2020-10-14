@@ -18,7 +18,11 @@ export default class Car {
             <h3 class="card-title">${this.make.toUpperCase()}` + `, ` + /*html*/`${this.model.toUpperCase()}</h3>
             <p class="card-text">Price: $${this.price}</p>
             <p class="card-text">Year: ${this.year}</p>
-            <button class="btn btn-success" onclick="app.carController.bid('${this.id}')">Bid</button>
+            <form onsubmit="app.carController.bid('${this.id}')">
+            <div className="form-group">
+            <input type="number" class="form-control" name="bid" id="bid" aria-describedby="helpId" placeholder="Bid">
+            </div>
+            <button class="btn btn-success" type="submit">Bid</button></form>
             <button class="btn btn-danger" onclick="app.carController.removeCar('${this.id}')">Delete</button>
         </div>
     </div>

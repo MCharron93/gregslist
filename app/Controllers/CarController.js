@@ -17,7 +17,11 @@ export default class CarController {
 
 
   bid(id) {
-    carService.bid(id)
+    event.preventDefault()
+    let form = event.target
+    // console.log(form.bid.value)
+    let bid = form.bid.value
+    carService.bid(id, bid)
   }
 
   removeCar(id) {

@@ -6,8 +6,13 @@ class CarService {
     // console.log("Car Service")NOTE -- used to check if connected
   }
 
-  bid(id) {
-
+  bid(id, bid) {
+    let temp = ProxyState.cars
+    if (bid > 0) {
+      let car = temp.find(c => c.id == id)
+      car.price += parseInt(bid)
+      ProxyState.cars = temp
+    }
   }
 
   removeCar(id) {
