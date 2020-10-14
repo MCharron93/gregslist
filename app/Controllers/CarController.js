@@ -3,8 +3,8 @@ import {carService} from "../Services/CarService.js"
 
 function _draw() {
   let cars = ProxyState.cars
-  let temp = carService
-  // console.log("")
+  let template = ""
+  cars.forEach(c => template += c.Template)
 }
 
 export default class CarController {

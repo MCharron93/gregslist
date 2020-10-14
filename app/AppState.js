@@ -1,4 +1,5 @@
 // import Value from "./Models/Value.js"
+import Car from "./Models/Cars.js"
 import Cars from "./Models/Cars.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -7,7 +8,8 @@ class AppState extends EventEmitter {
   // /** @type {Value[]} */
   // values = []
 
-  cars = [{make: "honda", model: "civic", year: 2000, price: 3000}]
+/**@type {Car[]} */
+  cars = [new Car({make: "honda", model: "civic", year: 2000, price: 3000})]
 }
 
 export const ProxyState = new Proxy(new AppState(), {
