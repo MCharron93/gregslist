@@ -19,7 +19,8 @@ export default class CarController {
   bid(id) {
     event.preventDefault()
     let form = event.target
-    // console.log(form.bid.value)
+    // console.log(form.bid.value) NOTE -- used to make sure bid is being passed in from form
+    // @ts-ignore
     let bid = form.bid.value
     carService.bid(id, bid)
   }

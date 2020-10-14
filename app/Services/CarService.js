@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js"
-import Car from "../Models/Cars.js"
+import Car from "../Models/Car.js"
 
 class CarService {
   constructor() {
@@ -8,6 +8,7 @@ class CarService {
 
   bid(id, bid) {
     let temp = ProxyState.cars
+
     if (bid > 0) {
       let car = temp.find(c => c.id == id)
       car.price += parseInt(bid)
