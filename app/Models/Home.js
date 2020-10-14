@@ -19,12 +19,12 @@ export default class Home {
             <h3 class="card-title">${this.address.toUpperCase()}` + `, ` + /*html*/`Rooms: ${this.rooms}</h3>
             <p class="card-text">Baths: ${this.bathrooms}</p>
             <p class="card-text">Price: $${this.price}</p>
-            <form onsubmit="app.carController.bid('${this.id}')">
+            <form onsubmit="app.homeController.bid('${this.id}')">
             <div className="form-group">
             <input type="number" class="form-control" name="bid" id="bid" aria-describedby="helpId" placeholder="Bid">
             </div>
-            <button class="btn btn-success" type="submit">Bid</button></form>
-            <button class="btn btn-danger" onclick="app.carController.removeCar('${this.id}')">Delete</button>
+            <button class="btn btn-success btn-block" type="submit">Bid</button></form>
+            <button class="btn btn-danger btn-block" onclick="app.homeController.removeHome('${this.id}')">Delete</button>
         </div>
     </div>
 </div>`
