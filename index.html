@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>gregslist</title>
 </head>
@@ -21,12 +22,32 @@
     </header>
 
 
-    <main>
-        <div id="app"></div>
-
-        <div class="row" id="cars">
-            
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col" id="form">
+                <form onsubmit="app.carController.createCar()" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="make" id="make" class="form-control" aria-describedby="helpId"
+                            placeholder="Make">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="model" id="model" class="form-control" aria-describedby="helpId"
+                            placeholder="Model">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="price" id="price" class="form-control" aria-describedby="helpId"
+                            placeholder="Price">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="year" id="year" class="form-control" aria-describedby="helpId"
+                            placeholder="Year">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Post</button>
+                </form>
+            </div>
         </div>
+        <div id="app"></div>
+        <div class="row" id="cars"></div>
     </main>
 
 
