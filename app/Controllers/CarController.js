@@ -10,8 +10,18 @@ function _draw() {
 
 export default class CarController {
   constructor() {
-    console.log(ProxyState.cars)
+    // console.log(ProxyState.cars)NOTE -- used to see if cars was populating in console
     _draw()
+    ProxyState.on("cars", _draw)
+  }
+
+
+  bid(id) {
+    carService.bid(id)
+  }
+
+  removeCar(id) {
+    carService.removeCar(id)
   }
 
   createCar() {
@@ -30,7 +40,7 @@ export default class CarController {
       // @ts-ignore
       price: form.price.value
     }
-    console.log(rawCar)
+    // console.log(rawCar)
     carService.createCar(rawCar)
   }
 }

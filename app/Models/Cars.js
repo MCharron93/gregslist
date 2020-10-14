@@ -15,10 +15,11 @@ export default class Car {
     <div class="card">
         <img src="https://via.placeholder.com/350x150" alt="" class="card-img-top img-fluid">
         <div class="card-body">
-            <h3 class="card-title">${this.make}` + `, ` + /*html*/`${this.model}</h3>
+            <h3 class="card-title">${this.make.toUpperCase()}` + `, ` + /*html*/`${this.model.toUpperCase()}</h3>
             <p class="card-text">Price: $${this.price}</p>
             <p class="card-text">Year: ${this.year}</p>
-            <button class="btn btn-success">Submit</button>
+            <button class="btn btn-success" onclick="app.carController.bid('${this.id}')">Bid</button>
+            <button class="btn btn-danger" onclick="app.carController.removeCar('${this.id}')">Delete</button>
         </div>
     </div>
 </div>`

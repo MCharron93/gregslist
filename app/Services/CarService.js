@@ -3,13 +3,27 @@ import Car from "../Models/Cars.js"
 
 class CarService {
   constructor() {
-    console.log("Car Service")
+    // console.log("Car Service")NOTE -- used to check if connected
   }
+
+  bid(id) {
+
+  }
+
+  removeCar(id) {
+    // console.log("remove car") NOTE -- used to see if button connected
+    let temp = ProxyState.cars
+    let carIndex = temp.findIndex(c => c.id == id)
+    temp.splice(carIndex, 1)
+    ProxyState.cars = temp
+  }
+
 
   createCar(rawCar) {
     let newCar = new Car(rawCar)
-    console.log(newCar)
-    let cars = [...ProxyState, newCar]
+    // console.log(newCar)
+    // console.log(ProxyState)
+    let cars = [...ProxyState.cars, newCar]
     ProxyState.cars = cars
   }
 
