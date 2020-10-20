@@ -49,7 +49,7 @@ export default class House {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form onsubmit="app.houseController.editHouse(event, '${this._id}')" class="form-inline">
+                    <form onsubmit="app.homeController.editHouse(event, '${this._id}')" class="form-inline">
                         <div class="col p-1">
                             <input type="text" name="rooms" id="rooms" value="${this.rooms}" class="form-control" placeholder="Rooms">
                         </div>
@@ -73,11 +73,11 @@ export default class House {
                             <input type="text" name="description" id="description" value="${this.description}" class="form-control"
                                 placeholder="Description">
                         </div>
-                        </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                         </form>
+                        </div>
                 </div>
             </div>
         </div>
