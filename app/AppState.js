@@ -10,10 +10,10 @@ class AppState extends EventEmitter {
   // values = []
 
   /**@type {Car[]} */
-  cars = [new Car({ make: "honda", model: "civic", year: 2000, price: 3000 })]
+  cars = []
 
   /**@type {Home[]} */
-  homes = [new Home({ address: "22 W. Philli Ct.", rooms: 2, bathrooms: 2.5, floor: "wood", yard: true, price: 200000 })]
+  homes = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

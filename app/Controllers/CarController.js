@@ -43,9 +43,15 @@ export default class CarController {
       // @ts-ignore
       year: form.year.value,
       // @ts-ignore
-      price: form.price.value
+      price: form.price.value,
+      // @ts-ignore
+      imgUrl: form.imgUrl.value,
+      // @ts-ignore
+      description: form.description.value
     }
     // console.log(rawCar)
     carService.createCar(rawCar)
+    // @ts-ignore
+    form.reset()
   }
 } 
