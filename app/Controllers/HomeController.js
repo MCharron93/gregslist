@@ -47,7 +47,7 @@ export default class HomeController {
     let form = e.target
     let editHouse = {
       // @ts-ignore
-      bedrooms: form.bedrooms.value,
+      bedrooms: form.rooms.value,
       // @ts-ignore
       bathrooms: form.bathrooms.value,
       // @ts-ignore
@@ -65,7 +65,7 @@ export default class HomeController {
     }
     // @ts-ignore
     $('#editHouseModal-' + houseId).modal('toggle')
-    homeService.createHouse(editHouse)
+    homeService.editHouse(editHouse)
   }
 
   removeHome(id) {
