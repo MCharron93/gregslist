@@ -25,7 +25,7 @@
     <main class="container-fluid">
         <div class="row text-center justify-content-center">
             <div class="card p-3" id="form">
-                <h2>Post your Car listing!</h2>
+                <h3>Post your Car listing!</h3>
                 <form onsubmit="app.carController.createCar()" class="form-inline">
                     <div class="col p-1">
                         <input type="text" name="make" id="make" class="form-control" placeholder="Make">
@@ -50,13 +50,41 @@
                 </form>
             </div>
         </div>
-        <div id="app">
-            <div class="row py-3" id="cars"></div>
-            <div class="row p-2 text-center">
-                <div class="col-12">Post your Homes!</div>
-            </div>
-            <div class="row py-3 text-center" id="homes"></div>
-        </div>
+        <div class="row text-center justify-content-center">
+            <div class="card p-3" id="form">
+                <h3>Post your Home listing!</h3>
+                <form onsubmit="app.homeController.createHome()" class="form-inline">
+                    <div class="col p-1">
+                        <input type="text" name="rooms" id="rooms" class="form-control" placeholder="Rooms">
+                    </div>
+                    <div class="col p-1">
+                        <input type="text" name="bathrooms" id="bathrooms" class="form-control" placeholder="Bathrooms">
+                    </div>
+                    <div class="col p-1">
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Price">
+                    </div>
+                    <div class="col p-1">
+                        <input type="number" name="yard" id="yard" class="form-control" placeholder="Yard">
+                    </div>
+                    <div class="col p-1">
+                        <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="ImageURL">
+                    </div>
+                    <div class="col p-1">
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Post</button>
+                </form>
+                <div id="app">
+                    <div class="row p-5 justify-content-center">
+                        <h1>Car Listings</h1>
+                    </div>
+                    <div class="row py-3" id="cars"></div>
+                    <div class="row p-5 justify-content-center">
+                        <h1>Home Listings</h1>
+                    </div>
+                    <div class="row py-3 text-center" id="houses"></div>
+                </div>
     </main>
 
 

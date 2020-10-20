@@ -25,8 +25,8 @@ export default class Car {
             <div className="form-group">
             <input type="number" class="form-control" name="bid" id="bid" aria-describedby="helpId" placeholder="Bid">
             </div>
-            <button class="btn btn-success" type="submit">Bid</button></form>
-            <button class="btn btn-danger" onclick="app.carController.removeCar('${this._id}')">Delete</button>
+            <button class="btn btn-success btn-block rounded" type="submit">Bid</button></form>
+            <button class="btn btn-danger btn-block rounded" onclick="app.carController.removeCar('${this._id}')">Delete</button>
         </div>
     </div>
 </div>`

@@ -1,31 +1,31 @@
 import { generateId } from "../Utils/GenerateId.js"
 
-export default class Home {
-  constructor({ address, rooms, bathrooms, floor, yard, price }) {
-    this.address = address
-    this.rooms = rooms
-    this.bathrooms = bathrooms
-    this.floor = floor
-    this.yard = yard
-    this.price = price
-    this.id = generateId()
+export default class House {
+  constructor(data) {
+    this.imgUrl = data.imgUrl
+    this.rooms = data.bedrooms
+    this.bathrooms = data.bathrooms
+    this.levels = data.levels
+    this.price = data.price
+    this.description = data.description
+    this._id = data._id || generateId()
   }
 
   get Template() {
     return /*html*/`<div class="col-4">
     <div class="card">
-        <img src="https://via.placeholder.com/600x400" alt="" class="card-img-top img-fluid">
+        <img src="${this.imgUrl}"class="card-img-top img-fluid">
         <div class="card-body">
-            <h3 class="card-title">${this.address.toUpperCase()}</h3>
-            <p>Rooms: ${this.rooms}</p>
-            <p class="card-text">Baths: ${this.bathrooms}</p>
+            <h3 class="card-title">Rooms: ${this.rooms} Baths: ${this.bathrooms}</h3>
+            <p class="card-text">Levels: ${this.levels}</p>
             <p class="card-text">Price: $${this.price}</p>
-            <form onsubmit="app.homeController.bid('${this.id}')">
+            <p>${this.description}</p>
+            <form onsubmit="app.homeController.bid('${this._id}')">
             <div className="form-group">
-            <input type="number" class="form-control" name="bid" id="bid" aria-describedby="helpId" placeholder="Bid">
+            <input type="number" class="form-control" name="bid" id="bid"  placeholder="Bid">
             </div>
             <button class="btn btn-success btn-block" type="submit">Bid</button></form>
-            <button class="btn btn-danger btn-block" onclick="app.homeController.removeHome('${this.id}')">Delete</button>
+            <button class="btn btn-danger btn-block" onclick="app.homeController.removeHome('${this._id}')">Delete</button>
         </div>
     </div>
 </div>`

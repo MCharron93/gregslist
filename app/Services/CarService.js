@@ -34,7 +34,7 @@ class CarService {
     api.delete("cars/" + id).then(res => {
       // console.log(res.data)
       this.getCars()
-    })
+    }).catch(err => console.error(err))
   }
 
 
