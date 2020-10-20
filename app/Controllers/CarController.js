@@ -48,4 +48,4 @@ export default class CarController {
     // console.log(rawCar)
     carService.createCar(rawCar)
   }
-}
+} 

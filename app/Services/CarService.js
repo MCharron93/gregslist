@@ -33,6 +33,6 @@ class CarService {
     ProxyState.cars = cars
   }
 
-}
+} 
 
 export const carService = new CarService()
