@@ -16,7 +16,6 @@ class CarService {
 
   bid(id, bid) {
     let temp = ProxyState.cars
-
     if (bid > 0) {
       let car = temp.find(c => c._id == id)
       car.price += parseInt(bid)

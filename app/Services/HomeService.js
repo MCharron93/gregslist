@@ -15,12 +15,23 @@ class HomeService {
       ProxyState.houses = res.data.data.map(house => new House(house))
     }).catch(err => console.error(err))
   }
+
+  createHouse(newHouse) {
+    api.post("houses", newHouse).then(res => {
+      this.getHouses()
+    }).catch(err => console.error(err))
+  }
+
+
   removeHome(id) {
     // console.log("Remove home") NOTE -- used to see if button connected
-    let temp = ProxyState.houses
-    let homeIndex = temp.findIndex(h => h._id == id)
-    temp.splice(homeIndex, 1)
-    ProxyState.houses = temp
+    // let temp = ProxyState.houses
+    // let homeIndex = temp.findIndex(h => h._id == id)
+    // temp.splice(homeIndex, 1)
+    // ProxyState.houses = temp
+    api.delete("houses/" + id).then(res => {
+      this.getHouses()
+    }).catch(err => console.error(err))
   }
 
   bid(id, bid) {

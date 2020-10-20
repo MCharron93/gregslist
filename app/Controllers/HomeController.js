@@ -16,19 +16,37 @@ export default class HomeController {
     _draw()
   }
 
-  // createHome(id) {
+  createHouse() {
+    event.preventDefault();
+    let form = event.target
+    let newHouse = {
+      // @ts-ignore
+      bedrooms: form.bedrooms.value,
+      // @ts-ignore
+      bathrooms: form.bathrooms.value,
+      // @ts-ignore
+      price: form.price.value,
+      // @ts-ignore
+      yard: form.yard.value,
+      // @ts-ignore
+      imgUrl: form.imgUrl.value,
+      // @ts-ignore
+      description: form.description.value
 
-  // }
+    }
+
+    homeService.createHouse()
+  }
 
   removeHome(id) {
     homeService.removeHome(id)
   }
 
   bid(id) {
-    // event.preventDefault();
-    // let form = event.target
-    // let bid = form.bid.value
-    // homeService.bid(id, bid)
+    event.preventDefault();
+    let form = event.target
+    let bid = form.bid.value
+    homeService.bid(id, bid)
   }
 }
 
