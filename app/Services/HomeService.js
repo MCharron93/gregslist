@@ -10,7 +10,7 @@ class HomeService {
 
   getHouses() {
     api.get("houses").then(res => {
-      console.log(res.data)
+      // console.log(res.data)
       // ; NOTE used to make sure data is being pulled
       ProxyState.houses = res.data.data.map(house => new House(house))
     }).catch(err => console.error(err))

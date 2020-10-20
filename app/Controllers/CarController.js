@@ -11,8 +11,8 @@ function _draw() {
 export default class CarController {
   constructor() {
     // console.log(ProxyState.cars)NOTE -- used to see if cars was populating in console
-    _draw()
     ProxyState.on("cars", _draw)
+    _draw()
   }
 
 

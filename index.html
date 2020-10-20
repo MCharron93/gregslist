@@ -53,7 +53,7 @@
         <div class="row text-center justify-content-center">
             <div class="card p-3" id="form">
                 <h3>Post your Home listing!</h3>
-                <form onsubmit="app.homeController.createHouse()" class="form-inline">
+                <form onsubmit="app.homeController.createHouse(event)" class="form-inline">
                     <div class="col p-1">
                         <input type="text" name="bedrooms" id="bedrooms" class="form-control" placeholder="Bedrooms">
                     </div>
@@ -64,7 +64,10 @@
                         <input type="number" name="price" id="price" class="form-control" placeholder="Price">
                     </div>
                     <div class="col p-1">
-                        <input type="number" name="yard" id="yard" class="form-control" placeholder="Yard">
+                        <input type="number" name="levels" id="levels" class="form-control" placeholder="Levels">
+                    </div>
+                    <div class="col p-1">
+                        <input type="number" name="year" id="year" class="form-control" placeholder="Year">
                     </div>
                     <div class="col p-1">
                         <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="ImageURL">
@@ -86,7 +89,6 @@
                     <div class="row py-3 text-center" id="houses"></div>
                 </div>
     </main>
-
 
 
 

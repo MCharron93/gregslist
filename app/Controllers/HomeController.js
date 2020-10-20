@@ -16,9 +16,10 @@ export default class HomeController {
     _draw()
   }
 
-  createHouse() {
-    event.preventDefault();
-    let form = event.target
+  createHouse(e) {
+
+    e.preventDefault();
+    let form = e.target
     let newHouse = {
       // @ts-ignore
       bedrooms: form.bedrooms.value,
@@ -27,15 +28,17 @@ export default class HomeController {
       // @ts-ignore
       price: form.price.value,
       // @ts-ignore
-      yard: form.yard.value,
+      year: form.year.value,
       // @ts-ignore
       imgUrl: form.imgUrl.value,
       // @ts-ignore
-      description: form.description.value
-
+      description: form.description.value,
+      levels: form.levels.value
     }
 
-    homeService.createHouse()
+    homeService.createHouse(newHouse)
+
+    form.reset()
   }
 
   removeHome(id) {
