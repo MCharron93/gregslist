@@ -22,6 +22,11 @@ class HomeService {
     }).catch(err => console.error(err))
   }
 
+  editHouse(editHouse) {
+    api.put("houses/" + editHouse._id, editHouse).then(res => {
+      this.getHouses()
+    }).catch(err => console.error(err))
+  }
 
   removeHome(id) {
     // console.log("Remove home") NOTE -- used to see if button connected

@@ -49,36 +49,35 @@ export default class House {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form onsubmit="app.carController.editHome('${this._id}')" class="form-inline">
+                    <form onsubmit="app.houseController.editHouse(event, '${this._id}')" class="form-inline">
                         <div class="col p-1">
-                            <input type="text" name="rooms" id="rooms" class="form-control" placeholder="Rooms">
+                            <input type="text" name="rooms" id="rooms" value="${this.rooms}" class="form-control" placeholder="Rooms">
                         </div>
                         <div class="col p-1">
-                            <input type="text" name="bathrooms" id="bathrooms" class="form-control" placeholder="Bathrooms">
+                            <input type="text" name="bathrooms" id="bathrooms" value="${this.bathrooms}" class="form-control" placeholder="Bathrooms">
                         </div>
                         <div class="col p-1">
-                            <input type="number" name="price" id="price" class="form-control" placeholder="Price">
+                            <input type="number" name="price" id="price" value="${this.price}" class="form-control" placeholder="Price">
                         </div>
                         <div class="col p-1">
-                            <input type="number" name="year" id="year" class="form-control" placeholder="Year">
+                            <input type="number" name="year" id="year" value="${this.year}" class="form-control" placeholder="Year">
                         </div>
                         <div class="col p-1">
-                            <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="ImageURL">
+                            <input type="text" name="imgUrl" id="imgUrl" value="${this.imgUrl}" class="form-control" placeholder="ImageURL">
                         </div>
                         <div class="col p-1">
-                            <input type="text" name="levels" id="levels" class="form-control"
+                            <input type="text" name="levels" id="levels" value="${this.levels}" class="form-control"
                                 placeholder="Levels">
                         </div>
                         <div class="col p-1">
-                            <input type="text" name="description" id="description" class="form-control"
+                            <input type="text" name="description" id="description" value="${this.description}" class="form-control"
                                 placeholder="Description">
                         </div>
-                        <button class="btn btn-primary" type="submit">Post</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                        </form>
                 </div>
             </div>
         </div>
